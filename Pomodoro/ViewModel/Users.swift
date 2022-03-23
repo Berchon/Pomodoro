@@ -10,10 +10,9 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class Users {
-    var auth: Auth = Auth.auth()
-    var firestore: Firestore = Firestore.firestore()
-    
-    func add(withEmail email: String, password: String) {
+    static func add(withEmail email: String, password: String) {
+        let auth: Auth = Auth.auth()
+        let firestore: Firestore = Firestore.firestore()
         auth.createUser(withEmail: email, password: password) { dataResult, error in
             if error == nil {
                 print("Usuário cadastrado com sucesso!")
@@ -24,7 +23,9 @@ class Users {
         }
     }
     
-    func login(withEmail email: String, password: String) {
+    static func login(withEmail email: String, password: String) {
+        let auth: Auth = Auth.auth()
+        let firestore: Firestore = Firestore.firestore()
         auth.signIn(withEmail: email, password: password) { user, error in
             if error == nil {
                 print("Sucesso ao logar usuário")
@@ -35,7 +36,9 @@ class Users {
         }
     }
     
-    func logout() -> Bool {
+    static func logout() -> Bool {
+        let auth: Auth = Auth.auth()
+        let firestore: Firestore = Firestore.firestore()
         do {
             try auth.signOut()
             return true

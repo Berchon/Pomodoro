@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 extension MainVC: UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -40,6 +41,8 @@ extension MainVC: ConfigurationsProtocol, TaskProtocol, EditTaskProtocol {
         self.configurations.shortPause = configurations.shortPause
         self.configurations.taskDuration = configurations.taskDuration
         self.timeRemaining = configurations.taskDuration
+
+        timerLabel.text = String(configurations.taskDuration / 60)
     }
     
     func addTask(task: String) {
@@ -112,14 +115,16 @@ class MainVC: UIViewController {
     var isPausedButtonShowing = false
     var isBreak = false
     var timer = Timer()
-    var configurations = Configurations(taskDuration: 0, shortPause: 0, longPause: 0, rounds: 0)
-    var timeRemaining = 25 * 60 // in seconds
+    var configurations = Configurations(taskDuration: 1500, shortPause: 300, longPause: 900, rounds: 4)
+    var timeRemaining = 1500 // in seconds
     var future = Date()
     var circleLayerFront = CAShapeLayer()
     
+    var auth: Auth!
+    
     // MARK: Actions
     @IBAction func logout(_ sender: Any) {
-        if Users().logout() {
+        if Users.logout() {
             navigationController?.popViewController(animated: true)
         }
     }
@@ -317,9 +322,32 @@ class MainVC: UIViewController {
         pickerView.delegate = self
         pickerData = ["Tarefa 1", "Pausa curta", "Tarefa 2", "Pausa curta"]
 
-        updateConfiguration(configurations: Configurations(
-            taskDuration: 180, shortPause: 60, longPause: 120, rounds: 4
-        ))
+        auth = Auth.auth()
+        if let loggedUserId = auth.currentUser?.uid {
+            Configuration.get(withUserId: loggedUserId) { data in
+                if let data = data {
+                    let initialConfig = Configurations(
+                        taskDuration: data["taskDuration"] as! Int,
+                        shortPause: data["shortPause"] as! Int,
+                        longPause: data["longPause"] as! Int,
+                        rounds: data["rounds"] as! Int
+                    )
+                    self.updateConfiguration(configurations: initialConfig)
+                    self.timeRemaining = initialConfig.taskDuration
+                    let getMinutePart = (self.timeRemaining / 60) % 60
+                    self.timerLabel.text = String(getMinutePart)
+                }
+                else {
+                    print("Erro ao acessar os dados do usuário!")
+                    print("Você será logado com a configuração padrão!")
+                }
+            }
+        }
+        else {
+            print("Erro ao acessar o Id do usuário!")
+            print("Você será logado com a configuração padrão!")
+        }
+        
         
         let getMinutePart = (timeRemaining / 60) % 60
         timerLabel.text = String(getMinutePart)

@@ -32,7 +32,7 @@ class RegisterVC: UIViewController {
             print("A senha não confere!")
             return
         }
-        Users().add(withEmail: email, password: password)
+        Users.add(withEmail: email, password: password)
     }
     
     // MARK: LifeCycle Methods

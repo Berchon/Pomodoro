@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 protocol ConfigurationsProtocol {
     func updateConfiguration(configurations: Configurations)
@@ -13,9 +15,10 @@ protocol ConfigurationsProtocol {
 
 class ConfigurationsVC: UIViewController {
     
-    // MARK: Delegate
+    // MARK: Properties
     var delegate: ConfigurationsProtocol? = nil
     var configuration: Configurations? = nil
+    var auth: Auth!
 
     // MARK: Outlets
     @IBOutlet weak var box: UIView!
@@ -48,27 +51,46 @@ class ConfigurationsVC: UIViewController {
     
     @IBAction func saveButtonAction(_ sender: Any) {
         let convertMinToSeconds = 60
+        guard let loggedUserId = auth.currentUser?.uid else {
+            print("Erro ao acessar o Id do usuário!")
+            return
+        }
+        let response = Configuration.save(
+            withUserId: loggedUserId,
+            duration: Int(durationSlider.value) * convertMinToSeconds,
+            short: Int(shortSlider.value) * convertMinToSeconds,
+            long: Int(longSlider.value) * convertMinToSeconds,
+            rounds: Int(roundSlider.value)
+        )
+        if !response {
+            print("Não foi possível salvar os dados")
+            return
+        }
         let configurations = Configurations(
             taskDuration: Int(durationSlider.value) * convertMinToSeconds,
             shortPause: Int(shortSlider.value) * convertMinToSeconds,
             longPause: Int(longSlider.value) * convertMinToSeconds,
-            rounds: Int(roundSlider.value) * convertMinToSeconds
+            rounds: Int(roundSlider.value)
         )
         if let delegate = self.delegate {
             delegate.updateConfiguration(configurations: configurations)
             navigationController?.popViewController(animated: true)
         }
+        
+        print("Dados salvo com sucesso!")
     }
     
     // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        auth = Auth.auth()
+        
         setup()
         guard let config = configuration else {
             navigationController?.popViewController(animated: false)
             return
         }
-        print(config.taskDuration / 60)
         durationSlider.value = Float(config.taskDuration / 60)
         shortSlider.value = Float(config.shortPause / 60)
         longSlider.value = Float(config.longPause / 60)

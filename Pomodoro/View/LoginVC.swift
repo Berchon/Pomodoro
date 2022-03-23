@@ -22,7 +22,7 @@ class LoginVC: UIViewController {
             if let password = passwordField.text {
                 emailField.text = ""
                 passwordField.text = ""
-                Users().login(withEmail: email, password: password)
+                Users.login(withEmail: email, password: password)
             }
             else {
                 print("Preencha sua Senha!")

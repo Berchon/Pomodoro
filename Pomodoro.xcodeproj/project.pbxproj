@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6F52BBB02D65C9665B4A2F43 /* Pods_Pomodoro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ECDB387741ECA5DE5B0618F /* Pods_Pomodoro.framework */; };
 		EE4CB86427E6950E008B828D /* EditTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CB86327E6950E008B828D /* EditTaskVC.swift */; };
+		EE6B554627EA8F6800384D6F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6B554527EA8F6800384D6F /* Configuration.swift */; };
 		EE6F8A4527E941890080D80F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6F8A4427E941890080D80F /* LoginVC.swift */; };
 		EE6F8A4827E960210080D80F /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6F8A4727E960210080D80F /* RegisterVC.swift */; };
 		EE6F8A4B27E969F10080D80F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE6F8A4A27E969F10080D80F /* GoogleService-Info.plist */; };
@@ -31,6 +32,7 @@
 		49E0C254C16D3C972CFB3859 /* Pods-Pomodoro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pomodoro.debug.xcconfig"; path = "Target Support Files/Pods-Pomodoro/Pods-Pomodoro.debug.xcconfig"; sourceTree = "<group>"; };
 		DAD37E5DB8247D3C8D92E9A7 /* Pods-Pomodoro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pomodoro.release.xcconfig"; path = "Target Support Files/Pods-Pomodoro/Pods-Pomodoro.release.xcconfig"; sourceTree = "<group>"; };
 		EE4CB86327E6950E008B828D /* EditTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskVC.swift; sourceTree = "<group>"; };
+		EE6B554527EA8F6800384D6F /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		EE6F8A4427E941890080D80F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		EE6F8A4727E960210080D80F /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		EE6F8A4A27E969F10080D80F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				EE6F8A4C27E974970080D80F /* Users.swift */,
+				EE6B554527EA8F6800384D6F /* Configuration.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				EEAE01E727E156B80032BF11 /* TaskVC.swift in Sources */,
 				EEA6D62227E5750300C46BC6 /* ConfigurationModel.swift in Sources */,
 				EE4CB86427E6950E008B828D /* EditTaskVC.swift in Sources */,
+				EE6B554627EA8F6800384D6F /* Configuration.swift in Sources */,
 				EE6F8A4527E941890080D80F /* LoginVC.swift in Sources */,
 				EE9483FB27DAC91700B04451 /* GradientColor.swift in Sources */,
 				EE7B009927E00731004931DB /* ConfigurationsVC.swift in Sources */,

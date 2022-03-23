@@ -393,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zuH-Kg-mAp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2125" y="84"/>
+            <point key="canvasLocation" x="2058" y="479"/>
         </scene>
         <!--Configurações-->
         <scene sceneID="5bB-Hu-oLE">
@@ -434,7 +434,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qk9-h8-Fyk">
                                                 <rect key="frame" x="148" y="0.0" width="206" height="65.5"/>
                                                 <subviews>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="5" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="hFy-8s-bxc">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="1" maxValue="59" translatesAutoresizingMaskIntoConstraints="NO" id="hFy-8s-bxc">
                                                         <rect key="frame" x="-2" y="0.0" width="210" height="31"/>
                                                         <color key="minimumTrackTintColor" red="0.96562010050000002" green="0.58442652230000003" blue="0.0081816017630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <connections>
@@ -444,7 +444,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ZU9-wr-0Ft">
                                                         <rect key="frame" x="0.0" y="35" width="206" height="30.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGe-d2-bxj">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGe-d2-bxj">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="30.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="40" id="zqO-g6-bcE"/>
@@ -462,7 +462,7 @@
                                                                 <color key="textColor" red="0.96562010050000002" green="0.58442652230000003" blue="0.0081816017630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxf-w3-7Wp">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="59" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxf-w3-7Wp">
                                                                 <rect key="frame" x="166" y="0.0" width="40" height="30.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="1lk-Mz-dYi"/>
@@ -716,7 +716,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5zh-uJ-JL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2126" y="-667"/>
+            <point key="canvasLocation" x="2058" y="-291"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IHD-mv-c9D">
