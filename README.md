@@ -53,8 +53,9 @@ git clone https://github.com/Berchon/Pomodoro.git
 ```
 Garanta que você tenha o cocoapod. Você pode tentar ver a versão do Cocoapod com o comando `pod --version`. Caso apareça a versão significa está instalado, caso contrário procure no google como instalar.
 
-Após garantir que você possui o cocoapod instalado digite o comando abaixo para fazer download das dependências do projeto
+Após garantir que você possui o cocoapod instalado digite os comandos abaixo para fazer download das dependências do projeto
 ```bash
+cd Pomodoro
 pod install
 ```
 Pronto! Agora é só abrir no seu `Xcode` o arquivo `Pomodoro.xcworkspace` e clicar no botão de `Play` (que aparece no Xcode) para rodar o App no simulador.
