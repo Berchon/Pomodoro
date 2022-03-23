@@ -15,7 +15,6 @@
 		EE6F8A4B27E969F10080D80F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE6F8A4A27E969F10080D80F /* GoogleService-Info.plist */; };
 		EE6F8A4D27E974970080D80F /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6F8A4C27E974970080D80F /* Users.swift */; };
 		EE7B009927E00731004931DB /* ConfigurationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B009827E00731004931DB /* ConfigurationsVC.swift */; };
-		EE90323427DD253A00F0BDC2 /* Main-bkp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE90323227DD253A00F0BDC2 /* Main-bkp.storyboard */; };
 		EE9483E727DAC76700B04451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9483E627DAC76700B04451 /* AppDelegate.swift */; };
 		EE9483E927DAC76700B04451 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9483E827DAC76700B04451 /* SceneDelegate.swift */; };
 		EE9483EB27DAC76700B04451 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9483EA27DAC76700B04451 /* MainVC.swift */; };
@@ -38,7 +37,6 @@
 		EE6F8A4A27E969F10080D80F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE6F8A4C27E974970080D80F /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		EE7B009827E00731004931DB /* ConfigurationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationsVC.swift; sourceTree = "<group>"; };
-		EE90323327DD253A00F0BDC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Pomodoro/Base.lproj/Main-bkp.storyboard"; sourceTree = "<group>"; };
 		EE9483E327DAC76700B04451 /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9483E627DAC76700B04451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE9483E827DAC76700B04451 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 		EE9483DA27DAC76700B04451 = {
 			isa = PBXGroup;
 			children = (
-				EE90323227DD253A00F0BDC2 /* Main-bkp.storyboard */,
 				EE9483E527DAC76700B04451 /* Pomodoro */,
 				EE9483E427DAC76700B04451 /* Products */,
 				6838FD901C0BFB44ADB547FB /* Pods */,
@@ -217,7 +214,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE9483F327DAC76A00B04451 /* LaunchScreen.storyboard in Resources */,
-				EE90323427DD253A00F0BDC2 /* Main-bkp.storyboard in Resources */,
 				EE6F8A4B27E969F10080D80F /* GoogleService-Info.plist in Resources */,
 				EE9483F027DAC76A00B04451 /* Assets.xcassets in Resources */,
 				EE9483EE27DAC76700B04451 /* Main.storyboard in Resources */,
@@ -291,14 +287,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EE90323227DD253A00F0BDC2 /* Main-bkp.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EE90323327DD253A00F0BDC2 /* Base */,
-			);
-			name = "Main-bkp.storyboard";
-			sourceTree = "<group>";
-		};
 		EE9483EC27DAC76700B04451 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
