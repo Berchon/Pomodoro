@@ -11,9 +11,13 @@ Para ajudar no controle de tempo foi desenvolvido esse aplicativo. Com ele você
 ✅ Adicionar suas atividades
 
 ✅ Configurar o tempo das atividades
+
 ✅ Configurar o tempo de descanso
+
 ✅ Configurar o tempo de descanso longo
+
 ✅ Configurar quantas atividades deverão ser realizadas até o descanso longo
+
 
 O Aplicativo consiste em um timer regressivo que lhe avisa o momento de fazer uma pausa/começar uma nova atividade.
 
