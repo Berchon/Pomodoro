@@ -9,6 +9,7 @@ A crescente exigência de aumento na produtividade exigida pelo mundo moderno fe
 Para ajudar no controle de tempo foi desenvolvido esse aplicativo. Com ele você pode usar conceitos básicos de Pomodoro como:
 
 ✅ Adicionar suas atividades
+
 ✅ Configurar o tempo das atividades
 ✅ Configurar o tempo de descanso
 ✅ Configurar o tempo de descanso longo
