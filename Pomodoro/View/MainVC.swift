@@ -320,7 +320,6 @@ class MainVC: UIViewController {
         
         pickerView.dataSource = self
         pickerView.delegate = self
-        pickerData = ["Tarefa 1", "Pausa curta", "Tarefa 2", "Pausa curta"]
 
         auth = Auth.auth()
         if let loggedUserId = auth.currentUser?.uid {

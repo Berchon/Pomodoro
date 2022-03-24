@@ -12,7 +12,6 @@ import FirebaseFirestore
 class Users {
     static func add(withEmail email: String, password: String) {
         let auth: Auth = Auth.auth()
-        let firestore: Firestore = Firestore.firestore()
         auth.createUser(withEmail: email, password: password) { dataResult, error in
             if error == nil {
                 print("Usuário cadastrado com sucesso!")
@@ -25,7 +24,6 @@ class Users {
     
     static func login(withEmail email: String, password: String) {
         let auth: Auth = Auth.auth()
-        let firestore: Firestore = Firestore.firestore()
         auth.signIn(withEmail: email, password: password) { user, error in
             if error == nil {
                 print("Sucesso ao logar usuário")
@@ -38,7 +36,6 @@ class Users {
     
     static func logout() -> Bool {
         let auth: Auth = Auth.auth()
-        let firestore: Firestore = Firestore.firestore()
         do {
             try auth.signOut()
             return true
